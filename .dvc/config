@@ -1,0 +1,5 @@
+[core]
+    remote = projectremote
+    autostage = true
+['remote "projectremote"']
+    url = s3://udacity-haitham-projec3

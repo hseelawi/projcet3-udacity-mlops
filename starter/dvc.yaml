@@ -1,0 +1,13 @@
+stages:
+  full_pipeline:
+    cmd: python train_model.py
+    deps:
+    - ../data/census_cleaned.csv
+    outs:
+    - ../model/binariser.joblib
+    - ../model/classifier.joblib
+    - ../model/encoder.joblib
+    - slice_output.txt
+    metrics:
+    - Metrics.json:
+        cache: false

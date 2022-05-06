@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  full_pipeline:
+    cmd: python train_model.py
+    deps:
+    - path: ../data/census_cleaned.csv
+      md5: 12c208530a5680c15ae19b34152286dd
+      size: 3518606
+    outs:
+    - path: ../model/binariser.joblib
+      md5: 68d67643c2f11e180eaa335146ade2ea
+      size: 403
+    - path: ../model/classifier.joblib
+      md5: 570fe5e31079be67a803b231df8b508b
+      size: 65536950
+    - path: ../model/encoder.joblib
+      md5: a553f204feb7d25cff7013915fd7ce8a
+      size: 3898
+    - path: Metrics.json
+      md5: be5b0f2a1d543207d4d6fa8a19114af7
+      size: 90
+    - path: slice_output.txt
+      md5: 3db59cb7949b8ebdf6312ed07172f52b
+      size: 5357
