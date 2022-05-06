@@ -74,6 +74,3 @@ def predict(request: RequestData):
     X, _, _, _ = process_data(request_df, categorical_features=cat_features, training=False, encoder=encoder)
     predicted_label = inference(model, X)
     return {'prediction': str(predicted_label[0])}
-
-if __name__ == "__main__":
-    uvicorn.run(app)
