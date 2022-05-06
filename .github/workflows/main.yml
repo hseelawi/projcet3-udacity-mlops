@@ -24,9 +24,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: DVC setup
-      uses: iterative/setup-dvc@v1
-
     - name: Install dependencies
       run: |
         python -m pip install -U setuptools pip
