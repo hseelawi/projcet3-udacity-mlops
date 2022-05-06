@@ -28,7 +28,7 @@ def test_predict_neg():
     'education': 'Bachelors', 'education-num': 13,
     'marital-status': 'Never-married', 'occupation': 'Tech-support',
     'relationship': 'Unmarried', 'race': 'White', 'sex': 'Male',
-    'capital-gain': 14084, 'capital-loss': 0, 'hours-per-week': 0,
+    'capital-gain': 0, 'capital-loss': 1000, 'hours-per-week': 0,
     'native-country': 'Canada'}
     resp = client.post("/predict", data=json.dumps(data))
     assert resp.status_code == 200

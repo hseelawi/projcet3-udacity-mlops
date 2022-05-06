@@ -6,7 +6,7 @@ from starter.ml.data import process_data
 
 @pytest.fixture
 def data():
-    data = "tests/sample_census_cleaned.csv"
+    data = "data/census_cleaned.csv"
     return pd.read_csv(data)
 
 @pytest.fixture
